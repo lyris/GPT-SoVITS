@@ -283,7 +283,7 @@ class en_G2p(G2p):
             # 先把单字母推出去
             elif len(word) == 1:
                 # 单读 A 发音修正, 这里需要原格式 o_word 判断大写
-                if o_word == "A":
+                if o_word == "A" and pos == "NNP":
                     pron = ["EY1"]
                 else:
                     pron = self.cmu[word][0]
